@@ -1,6 +1,7 @@
 package com.nhnacademy.edu.springboot.account;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -17,7 +18,10 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Account {
     @Id
+    @Column
     private Long number;
+
+    @Column
     private Integer balance;
 
 }

@@ -22,7 +22,7 @@ public class DefaultAccountService implements AccountService{
     }
 
     @Override
-    @Transactional(readOnly=true)
+    @Transactional()
     public Account createAccount(Account account) {
         boolean present = accountRepository.findById(account.getNumber()).isPresent();
         if(present){
